@@ -1,0 +1,4 @@
+SANITY_VERSION 1
+TMPDIR /home/daniel/KernelTesting/yocto-rpi3/tmp
+SSTATE_DIR /home/daniel/KernelTesting/yocto-rpi3/sstate-cache
+NATIVELSBSTRING ubuntu-18.04

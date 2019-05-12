@@ -1,0 +1,39 @@
+#Directories
+bin
+qt
+suite
+#src-master
+suite 
+suite2
+build
+tmp
+
+/*/tmp*
+/*/tmp-glibc*
+/*/*cache*
+/*/work 
+/*/downloads
+/*/*.log*
+/*/.tmp_versions 
+
+# yocto-rpi3 (not working)
+*/downloads
+*/tmp*
+*/sstate*
+*/cache
+*/bitbake*
+
+
+# Make files 
+#Makefile
+
+# Object files 
+KernelTesting.*
+.cache.*
+.main.*
+Module.*
+*.o*
+*.mod.*
+*.ko
+
+
