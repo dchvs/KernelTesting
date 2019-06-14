@@ -2,14 +2,13 @@ DESCRIPTION = "Kernel Test Framework"
 HOMEPAGE = "https://github.com/dchvs/ktfx.git"
 LICENSE = "GPL-2.0"
 
-#FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 PR = "r1"
-DEPENDS += "libnl gtest"
+DEPENDS += " libnl gtest"
 
 BB_STRICT_CHECKSUM = "0"
 LIC_FILES_CHKSUM = "file:///home/daniel/Downloads/googletest-master/LICENSE;md5=cbbd27594afd089daa160d3a16dd515a"
 
-SRCREV = "41e38ed61716007c8fc8ad13cf7f6695ed3149d3"
+SRCREV = "d39719ce80652e0b8c46d31be3b84edf758be4cb"
 SRC_URI = " \
           git://github.com/dchvs/ktfx.git;protocol=git \
 "
@@ -17,15 +16,13 @@ SRC_URI = " \
 S = "${WORKDIR}/git"
 
 
-EXTRA_OECMAKE += " \
-   	   -GNinja \
-		   -DARCH=arm \
-		   -DCROSS_COMPILE=arm-poky-linux-gnueabi- \
-		   -DCMAKE_INCLUDE_PATH=${WORKDIR}/recipe-sysroot/usr/include/libnl3 \
-       -DKDIR=/home/daniel/KernelTesting/yocto-rpi3-qemu/tmp/work/qemuarm-poky-linux-gnueabi/linux-yocto/4.19.30+gitAUTOINC+55b7409654_3df49db2ea-r0/linux-qemuarm-standard-build \
-"
-
 inherit pkgconfig cmake
+
+
+EXTRA_OECMAKE += " -DKERNEL_SRC=${STAGING_KERNEL_BUILDDIR} \
+		               -DARCH=arm \
+		               -DCROSS_COMPILE=arm-poky-linux-gnueabi- \
+"
 
 
 do_install() {

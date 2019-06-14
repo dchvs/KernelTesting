@@ -1,0 +1,7 @@
+/tmp*
+/tmp-glibc*
+/sstate*
+/cache
+/bitbake*
+/downloads
+
