@@ -5,10 +5,10 @@ LICENSE = "GPLv2"
 
 PR = "r2"
 DEPENDS += "libnl gtest ktf"
- 
+
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-2.0;md5=801f80980d171dd6425610833a22dbe6"
 
-SRCREV = "691c3eb60d7bf9a16cf8a20676dbdb3c3777633b"
+SRCREV = "7f9abc7b73d00d7340e4fc32e48acad13b9f4a73"
 SRC_URI = " git://github.com/dchvs/i2c-devs.git"
 
 #PV = "1.1+git${SRCPV}"
@@ -16,7 +16,8 @@ SRC_URI = " git://github.com/dchvs/i2c-devs.git"
 S = "${WORKDIR}/git"
 
 
-EXTRA_OECMAKE += " -DKERNEL_SRC=${STAGING_KERNEL_BUILDDIR}"
+export KERNEL_SRC="${STAGING_KERNEL_BUILDDIR}"
+export KTF_INCLUDE_DIRS="${STAGING_INCDIR}"
 
 inherit pkgconfig cmake module-base kernel-module-split
 
