@@ -8,7 +8,7 @@ DEPENDS += "libnl gtest ktf"
 
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-2.0;md5=801f80980d171dd6425610833a22dbe6"
 
-SRCREV = "7f9abc7b73d00d7340e4fc32e48acad13b9f4a73"
+SRCREV = "93f03ef1bb64373516cf4fbd9c78ce523229056c"
 SRC_URI = " git://github.com/dchvs/i2c-devs.git"
 
 #PV = "1.1+git${SRCPV}"
@@ -27,7 +27,6 @@ do_install() {
 
     install -d ${D}/lib/modules/${KERNEL_VERSION}/kernel/drivers
     cp -R ${S}/kernel/src/i2c-devs.ko ${D}/lib/modules/${KERNEL_VERSION}/kernel/drivers
-
 }
 
 FILES_${PN} = " \
