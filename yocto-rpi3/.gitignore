@@ -4,4 +4,5 @@
 /cache
 /bitbake*
 /downloads
-
+/conf/sanity*
+/conf/template*

@@ -7,15 +7,18 @@ DEPENDS += " libnl gtest"
 
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-2.0;md5=801f80980d171dd6425610833a22dbe6"
 
-SRCREV = "d39719ce80652e0b8c46d31be3b84edf758be4cb"
+SRCREV = "0f14f0ff11f83b3668ac733f44c73d1fd26b12e3"
 SRC_URI = "git://github.com/dchvs/ktfx.git;protocol=git"
 
 S = "${WORKDIR}/git"
 
-EXTRA_OECMAKE += " -DKERNEL_SRC=${STAGING_KERNEL_BUILDDIR} \
-		               -DARCH=arm \
-		               -DCROSS_COMPILE=arm-poky-linux-gnueabi- \
-"
+
+# Makefile parameters 
+export KERNEL_SRC="${STAGING_KERNEL_BUILDDIR}"
+export ARCH="arm"
+export CROSS_COMPILE="arm-poky-linux-gnueabi-"
+
+
 inherit pkgconfig cmake
 
 do_install() {
