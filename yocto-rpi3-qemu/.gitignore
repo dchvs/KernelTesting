@@ -1,8 +1,0 @@
-/tmp*
-/tmp-glibc*
-/sstate*
-/cache
-/bitbake*
-/downloads
-/conf/sanity*
-/conf/template*

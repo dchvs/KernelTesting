@@ -5,7 +5,7 @@
 ```js
 cd poky
 
-<yocto-i2c-devs/poky>$ source oe-init-build-env ../<yocto-rpi3-qemu>
+<layers/poky>$ source oe-init-build-env ../../<yocto-rpi3>
 
 bitbake <core-image-base>
 ```
