@@ -10,9 +10,12 @@
 [submodule "meta-raspberrypi"]
 	path = meta-raspberrypi
 	url = https://github.com/agherzan/meta-raspberrypi.git
+
 [submodule "meta-ktf"]
 	path = meta-ktf
 	url = https://github.com/dchvs/meta-ktf.git
+	branch = master
 [submodule "meta-i2c-devices"]
 	path = meta-i2c-devices
 	url = https://github.com/dchvs/meta-i2c-devices.git
+	branch = master
