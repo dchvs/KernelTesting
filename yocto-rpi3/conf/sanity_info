@@ -1,4 +1,4 @@
 SANITY_VERSION 1
-TMPDIR /home/daniel/projects/yocto-i2c-devs/yocto-rpi3/tmp
-SSTATE_DIR /home/daniel/projects/yocto-i2c-devs/yocto-rpi3/sstate-cache
+TMPDIR /home/daniel/github/sources/yocto-i2c-devs/yocto-rpi3/tmp
+SSTATE_DIR /home/daniel/github/sources/yocto-i2c-devs/yocto-rpi3/sstate-cache
 NATIVELSBSTRING ubuntu-18.04
