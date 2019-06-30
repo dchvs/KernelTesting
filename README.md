@@ -1,6 +1,14 @@
 # KernelTesting
 
-## Installation
+Yocto-Project distribution for [KTF](https://github.com/dchvs/ktf)  & [I²C devices](https://github.com/dchvs/i2c-devs) integration.
+
+## Build
+
+Clone repository:
+
+```js
+git clone --recursive git@github.com:dchvs/yocto-i2c-devs.git
+```
 
 ### QEMU simulation
 ```js
@@ -24,5 +32,5 @@ bitbake <image>
 ```
 
 
-image are: 
-	* core-image-base 
+image:
+- core-image-base
